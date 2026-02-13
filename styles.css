@@ -28,11 +28,8 @@ a { color: inherit; }
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.nav__logo { display:flex; align-items:center; gap:12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
-.nav__logo img { width:38px; height:38px; border-radius:10px; box-shadow: 0 6px 18px rgba(31,107,255,0.3); }
-.nav__logo span span { color: var(--blue); }
-
-.nav__logo span { color: var(--blue); }
+.nav__logo { display:flex; align-items:center; }
+.nav__logo img { height:46px; width:auto; }
 .nav__links { display: flex; gap: 18px; font-size: 0.95rem; }
 .nav__links a { text-decoration: none; color: var(--muted); padding-bottom: 4px; border-bottom: 2px solid transparent; }
 .nav__links a:hover { color: var(--blue); }
@@ -116,3 +113,6 @@ main { padding: 60px 8%; display: flex; flex-direction: column; gap: 80px; }
   .nav__links { flex-wrap: wrap; justify-content: center; }
   .section { padding: 28px; }
 }
+
+.hero__card-icon { width:54px; margin-bottom:12px; filter: drop-shadow(0 10px 20px rgba(31,107,255,0.25)); }
+.contact__logo { width:90px; display:block; margin:12px 0 18px; }
