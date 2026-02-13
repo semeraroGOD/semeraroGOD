@@ -91,3 +91,6 @@ main { padding: 60px 8%; display: flex; flex-direction: column; gap: 80px; }
 
 .nav__logo { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
 .nav__logo span { color: var(--blue); }
+
+.nav__logo { font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
+.nav__logo span { color: var(--blue); }
