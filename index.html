@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SemeraroGOD — Digital Studio</title>
-  <meta name="description" content="Premium digital studio: identities, bespoke sites, activations and content." />
+  <meta name="description" content="Premium digital studio: identities, bespoke sites, activations and content.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
-<body>
+<body data-page="home">
+  <div class="loader" id="loader"><img src="assets/logo-monogram.svg" alt="SemeraroGOD"/></div>
   <header class="nav">
     <div class="nav__logo"><img src="assets/logo-wordmark.svg" alt="SemeraroGOD"></div>
     <nav class="nav__links" id="navLinks">
-      <a href="#hero">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <button class="nav__toggle" id="navToggle">☰</button>
     <a class="nav__cta" href="mailto:hello@semerarogod.com">Start a project</a>
@@ -31,10 +31,10 @@
       <div class="hero__content" data-aos="fade-right">
         <p class="eyebrow">Digital studio · Côte d'Azur → Worldwide</p>
         <h1>Premium identities, bespoke websites and activations built for ambitious brands.</h1>
-        <p class="hero__desc">SemeraroGOD unifies branding, product and content within one workflow. No silos—design, dev and content move together.</p>
+        <p class="hero__desc">SemeraroGOD unifies branding, product and content in a single workflow. No silos — design, dev and content move together.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Start a project</a>
-          <a class="btn btn--ghost" href="#work">See our work</a>
+          <a class="btn btn--primary" href="contact.html">Start a project</a>
+          <a class="btn btn--ghost" href="realisations.html">See our work</a>
         </div>
       </div>
       <div class="hero__visual" data-aos="fade-left">
@@ -47,7 +47,7 @@
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="services-teaser">
       <div class="section__header" data-aos="fade-up">
         <p class="eyebrow">Services</p>
         <h2>What we deliver</h2>
@@ -57,22 +57,18 @@
           <h3>Brand systems</h3>
           <p>Identities, guidelines, deck & social templates ready to deploy.</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="100">
+        <article data-aos="fade-up" data-aos-delay="120">
           <h3>Bespoke web</h3>
           <p>High fidelity UX/UI, headless builds, Webflow & GSAP animations.</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="200">
+        <article data-aos="fade-up" data-aos-delay="240">
           <h3>Activation & content</h3>
           <p>Landing campaigns, CRM, newsletters, motion & reels turnkey.</p>
-        </article>
-        <article data-aos="fade-up" data-aos-delay="300">
-          <h3>Ongoing support</h3>
-          <p>Design systems, maintenance, CRO, performance analytics.</p>
         </article>
       </div>
     </section>
 
-    <section class="about-hero" id="about">
+    <section class="about-hero">
       <div data-aos="fade-right">
         <p class="eyebrow">About</p>
         <h2>An independent digital atelier obsessed with speed & precision.</h2>
@@ -104,7 +100,7 @@
         <article data-aos="fade-up" data-aos-delay="240">
           <div class="tag">Activation</div>
           <h3>Vice City Pop-up</h3>
-          <p>Event site + social kit, 5,200 leads in 10 days.</p>
+          <p>Event site + social kit. 5,200 leads in 10 days.</p>
         </article>
       </div>
     </section>
@@ -120,7 +116,7 @@
           <cite>— Anaïs M., Maison Riviera</cite>
         </blockquote>
         <blockquote data-aos="fade-up" data-aos-delay="120">
-          “They run art direction, dev and content. We no longer juggle three teams.”
+          “They handle art direction, dev and content. We no longer juggle three teams.”
           <cite>— Matteo R., Fintech</cite>
         </blockquote>
       </div>
@@ -132,12 +128,10 @@
         <h2>Ready to launch your next project?</h2>
         <p>hello@semerarogod.com · +33 6 00 00 00 00</p>
       </div>
-      <form class="contact-form" id="contactForm" data-aos="fade-left">
-        <label>Name / company<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" rows="3" required></textarea></label>
-        <button class="btn btn--primary" type="submit">Send</button>
-      </form>
+      <div data-aos="fade-left">
+        <a class="btn btn--primary" href="mailto:hello@semerarogod.com">Start a project</a>
+        <a class="btn btn--ghost" href="services.html">See services</a>
+      </div>
     </section>
   </main>
 
@@ -155,15 +149,7 @@
     AOS.init({ duration: 900, once: true });
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(e.target);
-      const msg = `Name: ${data.get('name')}%0AEmail: ${data.get('email')}%0AMessage: ${data.get('message')}`;
-      window.location.href = `mailto:hello@semerarogod.com?subject=SemeraroGOD&body=${msg}`;
-    });
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
   </script>
 </body>
 </html>
