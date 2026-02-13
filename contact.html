@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — SemeraroGOD</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+  <header class="nav">
+    <div class="nav__logo">Semeraro<span>GOD</span></div>
+    <nav class="nav__links">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="studio.html">Studio</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <a class="nav__cta" href="mailto:hello@semerarogod.com">Parler au studio</a>
+  </header>
+
+  <main>
+    <section class="section">
+      <p class="eyebrow">Contact</p>
+      <h2>Briefons votre prochain lancement</h2>
+      <p>hello@semerarogod.com · +33 6 00 00 00 00</p>
+    </section>
+
+    <section class="section">
+      <h3>Formulaire express</h3>
+      <form class="contact-form" id="contactForm">
+        <label>
+          Nom / société
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Téléphone (optionnel)
+          <input type="text" name="phone">
+        </label>
+        <label>
+          Budget estimé
+          <input type="text" name="budget" placeholder="ex. 15-30k€">
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn btn--primary" type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© SemeraroGOD 2026 · Studio Digital Côte d'Azur</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const body = `Nom: ${data.get('name')}` + decodeURIComponent('%0A') +
+          `Email: ${data.get('email')}` + decodeURIComponent('%0A') +
+          `Téléphone: ${data.get('phone') || '—'}` + decodeURIComponent('%0A') +
+          `Budget: ${data.get('budget') || '—'}` + decodeURIComponent('%0A') +
+          `Message: ${data.get('message')}`;
+        window.location.href = `mailto:hello@semerarogod.com?subject=Brief%20SemeraroGOD&body=${encodeURIComponent(body)}`;
+      });
+    }
+  </script>
+</body>
+</html>
