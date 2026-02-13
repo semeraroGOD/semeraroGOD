@@ -4,166 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SemeraroGOD — Studio Digital</title>
-  <meta name="description" content="Agence digitale premium : identités, sites sur-mesure, activations et contenus." />
+  <meta name="description" content="SemeraroGOD conçoit des identités, des sites et des activations digitales pour marques exigeantes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
+  <div class="loader" id="loader">
+    <img src="assets/logo-monogram.svg" alt="SemeraroGOD"/>
+  </div>
   <header class="nav">
-    <div class="nav__logo"><img src="assets/logo-wordmark.svg" alt="SemeraroGOD"></div>
+    <div class="nav__logo"><img src="assets/logo-wordmark.svg" alt="SemeraroGOD"/></div>
     <nav class="nav__links" id="navLinks">
-      <a href="#hero">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#about">À propos</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#testimonials">Témoignages</a>
-      <a href="#contact">Contact</a>
+      <a class="active" href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <button class="nav__toggle" id="navToggle">☰</button>
-    <a class="nav__cta" href="mailto:hello@semerarogod.com">Parler au studio</a>
+    <a class="nav__cta" href="mailto:hello@semerarogod.com">Démarrer un projet</a>
   </header>
 
   <main>
-    <section class="hero" id="hero">
-      <div class="hero__content" data-aos="fade-right">
+    <section class="hero">
+      <div class="hero__content">
         <p class="eyebrow">Studio digital · Côte d'Azur → Monde</p>
-        <h1>Identités premium, sites sur-mesure et activations taillées pour les marques exigeantes.</h1>
-        <p class="hero__desc">SemeraroGOD assemble branding, produit et contenus dans un seul flux. Pas de silos : design, dev et contenus avancent ensemble.</p>
+        <h1>Identités premium & expériences web sculptées pour les marques qui veulent briller en bleu électrique.</h1>
+        <p class="hero__desc">Nous orchestrons branding, design d'interface et développement haute performance en un seul flux. Chaque mandat est livré clé en main avec un niveau d'exigence obsessionnel.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Démarrer un projet</a>
-          <a class="btn btn--ghost" href="#portfolio">Voir nos cas</a>
+          <a class="btn btn--primary" href="contact.html">Démarrer un projet</a>
+          <a class="btn btn--ghost" href="realisations.html">Voir nos cas</a>
         </div>
       </div>
-      <div class="hero__visual" data-aos="fade-left">
-        <img src="assets/logo-icon.svg" alt="SemeraroGOD" />
+      <div class="hero__card">
+        <img class="hero__card-icon" src="assets/logo-icon.svg" alt="SemeraroGOD icon"/>
+        <span>Last drops</span>
         <ul>
-          <li>+40 lancements en 24 mois</li>
-          <li>Sites headless, Webflow & Shopify</li>
-          <li>Branding, content, automation</li>
+          <li>Luxury web 03 — Hôtel privé (Monaco)</li>
+          <li>Launch campaign — Fintech AMF</li>
+          <li>Immersive site — Collection Riviera</li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="section__header" data-aos="fade-up">
-        <p class="eyebrow">Services</p>
-        <h2>Ce que nous orchestrons</h2>
+    <section class="quick-grid">
+      <article>
+        <h3>Services</h3>
+        <p>Branding, design system, sites headless, contenus et campagnes.</p>
+        <a href="services.html">Voir le détail →</a>
+      </article>
+      <article>
+        <h3>Réalisations</h3>
+        <p>3 études de cas clés : Riviera Collection, Blue Asset, Vice City Pop-up.</p>
+        <a href="realisations.html">Explorer →</a>
+      </article>
+      <article>
+        <h3>Manifesto</h3>
+        <p>Notre méthode, notre rythme et ce qui nous rend différents.</p>
+        <a href="about.html">Lire le manifesto →</a>
+      </article>
+      <article>
+        <h3>Contact</h3>
+        <p>Briefs, disponibilités, process de démarrage et formulaire.</p>
+        <a href="contact.html">Discuter →</a>
+      </article>
+    </section>
+
+    <section class="grid" id="services">
+      <div class="grid__header">
+        <p class="eyebrow">Aperçu</p>
+        <h2>Trois piliers, un seul studio</h2>
       </div>
       <div class="grid__cards">
-        <article data-aos="fade-up" data-aos-delay="0">
+        <article>
           <h3>Brand systems</h3>
-          <p>Identités, guidelines, templates decks / socials prêts à activer.</p>
+          <p>Logotypes, palettes, typographies et guidelines opérationnelles pour exprimer votre ADN sur tous les points de contact.</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="100">
+        <article>
           <h3>Web sur-mesure</h3>
-          <p>UX/UI haute fidélité, intégrations headless, Webflow, animations GSAP.</p>
+          <p>Sites headless, animations WebGL et intégration no-code selon les enjeux (acquisition, storytelling ou ecommerce).</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="200">
+        <article>
           <h3>Activation & content</h3>
-          <p>Landing campaigns, CRM, newsletters, motion & reels clé en main.</p>
-        </article>
-        <article data-aos="fade-up" data-aos-delay="300">
-          <h3>Support continu</h3>
-          <p>Design system, maintenance, CRO, performance analytics.</p>
+          <p>Landing campaigns, newsletters, assets sociaux prêts à publier. Nous branchons production et diffusion.</p>
         </article>
       </div>
     </section>
 
-    <section class="about-hero" id="about">
-      <div data-aos="fade-right">
-        <p class="eyebrow">À propos</p>
-        <h2>Un atelier digital indépendant obsédé par la vitesse & la précision.</h2>
-        <p>Nous opérons en strike team : creative direction, UX/UI, front-end, automation. Slack/Notion/Figma, recaps quotidiens, décisions en temps réel.</p>
-      </div>
-      <div class="stats" data-aos="fade-left">
-        <article><strong>40</strong><span>projets livrés</span></article>
-        <article><strong>3</strong><span>pays opérés</span></article>
-        <article><strong>96%</strong><span>clients récurrents</span></article>
-      </div>
-    </section>
-
-    <section class="section" id="portfolio">
-      <div class="section__header" data-aos="fade-up">
-        <p class="eyebrow">Portfolio</p>
+    <section class="cases" id="cases">
+      <div class="cases__header">
+        <p class="eyebrow">Focus</p>
         <h2>Réalisations récentes</h2>
       </div>
       <div class="cases__list">
-        <article data-aos="fade-up" data-aos-delay="0">
-          <div class="tag">Web immersif</div>
+        <article>
+          <div class="tag">Web Immersif</div>
           <h3>Riviera Collection</h3>
-          <p>Scroll narratif + configurateur villas. Lighthouse 97.</p>
+          <p>Site éditorial en scroll chorégraphié + configurateur villas. Temps de chargement &lt; 1s malgré les visuels 4K.</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="120">
+        <article>
           <div class="tag">Plateforme</div>
           <h3>Blue Asset</h3>
-          <p>Branding + design system + librairie React.</p>
+          <p>Rebranding complet + design system Figma + librairie React pour déployer 8 produits financiers en simultané.</p>
         </article>
-        <article data-aos="fade-up" data-aos-delay="240">
+        <article>
           <div class="tag">Activation</div>
           <h3>Vice City Pop-up</h3>
-          <p>Site événement + kit social, 5 200 leads en 10 j.</p>
+          <p>Site événement + kit social, tracking analytics et automatisation CRM. 5 200 leads en 10 jours.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="testimonials">
-      <div class="section__header" data-aos="fade-up">
-        <p class="eyebrow">Témoignages</p>
-        <h2>Ce que disent nos clients</h2>
+    <section class="manifesto" id="manifesto">
+      <div class="manifesto__content">
+        <p class="eyebrow">Manifesto</p>
+        <h2>On ne fait pas du volume. On prend des projets où l'on peut tout orchestrer.</h2>
+        <ul>
+          <li><strong>Hyperdispo.</strong> Slack, WhatsApp, Notion — on s'adapte à votre stack.</li>
+          <li><strong>Design + dev.</strong> Pas de friction entre créatif et technique : tout est internalisé.</li>
+          <li><strong>Data-ready.</strong> Nos livrables incluent plan de tracking, SEO technique et tests QA.</li>
+        </ul>
       </div>
-      <div class="testimonials">
-        <blockquote data-aos="fade-up" data-aos-delay="0">
-          “SemeraroGOD a livré un site headless + design system en 5 semaines. Leur approche est chirurgicale.”
-          <cite>— Anaïs M., Maison Riviera</cite>
-        </blockquote>
-        <blockquote data-aos="fade-up" data-aos-delay="120">
-          “Ils gèrent la direction artistique, le dev et les contenus. On n’a plus besoin de coordonner 3 équipes.”
-          <cite>— Matteo R., Fintech</cite>
-        </blockquote>
+      <div class="manifesto__aside">
+        <p>SemeraroGOD travaille avec des maisons de luxe, fonds d'investissement, artistes et entrepreneurs. Nous pouvons démarrer un sprint en 7 jours si le brief est clair.</p>
+        <a class="btn btn--primary" href="contact.html">Envoyer un deck</a>
       </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div data-aos="fade-right">
-        <p class="eyebrow">Contact</p>
-        <h2>Prêt à lancer votre prochain projet ?</h2>
-        <p>hello@semerarogod.com · +33 6 00 00 00 00</p>
-      </div>
-      <form class="contact-form" id="contactForm" data-aos="fade-left">
-        <label>Nom / société<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" rows="3" required></textarea></label>
-        <button class="btn btn--primary" type="submit">Envoyer</button>
-      </form>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© SemeraroGOD 2026 · Digital Studio — Suivez-nous</p>
-    <div class="socials">
-      <a href="#">LinkedIn</a>
-      <a href="#">Dribbble</a>
-      <a href="#">Instagram</a>
-    </div>
+    <p>© SemeraroGOD 2026 · Studio Digital Côte d'Azur</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 900, once: true });
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(e.target);
-      const msg = `Nom: ${data.get('name')}%0AEmail: ${data.get('email')}%0AMessage: ${data.get('message')}`;
-      window.location.href = `mailto:hello@semerarogod.com?subject=Brief%20SemeraroGOD&body=${msg}`;
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
